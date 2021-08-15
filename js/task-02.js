@@ -7,14 +7,17 @@ const ingredients = [
   'Приправы',
 ];
 
-function createList() {
+function createNewList() {
   const getList = document.querySelector('#ingredients')
-  function createItem(item) {
+  console.log(getList);
+  function createNewItem(item) {
     const newItem = document.createElement('li')
     newItem.textContent = item
     return newItem
   }
-  const newList = ingredients.map(createItem)
+  // console.log(createNewItem(ingredients));
+  const newList = ingredients.map(createNewItem)
+  // console.log(newList);
   getList.append(...newList)
 }
-createList()
+createNewList()
