@@ -13,27 +13,28 @@ const images = [
   },
 ];
 
-const list = document.querySelector('#gallery')
-console.log(list);
+// const listRef = document.querySelector('#gallery')
+// function newItem(item) {
+//   return `<li><img src='${item.url}' alt="${item.alt}"></li>`
+// }
+// newItem(images)
+// const newList = images.map(newItem)
+// console.log(newList);
+// listRef.insertAdjacentHTML('afterbegin', newList)
 
-function createElement(image) {
-    // const itemRef = document.createElement('li')
-    // const imgRef = document.createElement('img')
-    // imgRef.src = image.url
-    // imgRef.alt = image.alt
-    // itemRef.append(imgRef)
-    // return itemRef
-    return (`
-    <li><img src="${image.url}" alt="${image.alt}" /></li> 
-    `)
+const galleryRef = document.querySelector('#gallery')
+console.log(galleryRef);
+function createItem(item) {
+  const newItem = document.createElement('li')
+  const newImage = document.createElement('img')
+  newImage.src = item.url
+  newImage.alt = item.alt
+  console.log(newImage);
+  console.log(newImage);
+  newItem.append(newImage)
+  return newItem
 }
-// console.log(createElement(images[0]));
 
+const newList = images.map(createItem)
+galleryRef.append(...newList)
 
-const elementsListRef = images.map(image =>
-    createElement(image)
-)
-
-console.log(elementsListRef);
-
-list.insertAdjacentHTML('afterbegin', elementsListRef)

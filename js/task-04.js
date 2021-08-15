@@ -1,40 +1,81 @@
 let counterValue = 0
-const decrementValue = document.querySelector('button[data-action="decrement"]')
-const incrementValue = document.querySelector('button[data-action="increment"]')
+const btnDec = document.querySelector('button[data-action="decrement"]')
+const btnInc = document.querySelector('button[data-action="increment"]')
+const spanVal = document.querySelector('#value')
 
-const value = document.querySelector('#value')
-
-decrementValue.addEventListener('click', () => {
+const dec = () => {
     counterValue -= 1
-    console.log(counterValue);
-    value.textConent = counterValue
-})
-
-const decrement = () => {
-    counterValue -= 1
-    console.log(counterValue);
+    spanVal.textContent = counterValue
 }
 
-// let counterValue = 0;
-// const decrementValue = document.querySelector('button[data-action="decrement"]')
-// // console.log(decrementValue);
-// const incrementValue = document.querySelector('button[data-action="increment"]')
-// // console.log(incrementValue);
-// const value = document.querySelector('#value')
-// // console.log(value);
+const inc = () => {
+    counterValue += 1
+    spanVal.textContent = counterValue
+}
 
-// const decrement = () => {
+btnDec.addEventListener('click', dec)
+btnInc.addEventListener('click', inc)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let counterValue = 0
+// const decrementRef = document.querySelector('button[data-action="decrement"]')
+
+// const incrementRef = document.querySelector('button[data-action="increment"]')
+
+// const spanRef = document.querySelector('#value')
+
+// const decremet = () => {
 //     counterValue -= 1
-//     // console.log(counterValue);
-//     value.textContent = counterValue
+//     spanRef.textContent = counterValue
 // }
 
 // const increment = () => {
 //     counterValue += 1
-//     // console.log(counterValue);
-//     value.textContent = counterValue
+//     spanRef.textContent = counterValue
 // }
 
-// decrementValue.addEventListener('click', decrement)
-// incrementValue.addEventListener('click', increment)
-
+// decrementRef.addEventListener('click', decremet)
+// incrementRef.addEventListener('click', increment)

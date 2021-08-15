@@ -1,22 +1,11 @@
-const inputRef = document.querySelector('#name-input')
-console.log(inputRef);
-const spanRef = document.querySelector('#name-output')
-console.log(spanRef);
+const inpRef = document.querySelector('#name-input')
+const outRef = document.querySelector('#name-output')
 
-const updateValue = (event) => {
-    console.log(event.target.value);
-    if (event.target.value === '') {
-      return  spanRef.textContent = 'незнакомец'
-    }
-    spanRef.textContent = event.target.value
+const updOut = (event) => {
+  if (event.target.value === '') {
+    return outRef.textContent = 'незнакомец'
+  }
+  outRef.textContent = event.target.value
 }
 
-// inputRef.addEventListener('input', (event) => {
-//     console.log(event.target.value);
-//     if (event.target.value === '') {
-//       return  spanRef.textContent = 'незнакомец'
-//     }
-//     spanRef.textContent = event.target.value
-// })
-
-inputRef.addEventListener('input', updateValue)
+inpRef.addEventListener('input', updOut)
